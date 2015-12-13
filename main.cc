@@ -37,6 +37,11 @@ int main(int argc, char* argv[]) {
         
         for(auto row : data){ // row is std::pair<std::string, std::string> here
             std::cout << row.first << " = " << row.second << std::endl;
+            
+            /*
+            if you need a c-string just use std::string's method c_str(), so that will looks like
+            printf("%s = %s\n", row.first.c_str(), row.second.c_str());
+            */
         }
         
    } catch (adicSQLexception &e) {
